@@ -8,6 +8,7 @@
         
         for(i=1; i<=layers; i++){
             var curLayer = comp.layer(i)
+            //Shy layer if the time indicator is not over it, otherwise show it and select it.
             if(curLayer.inPoint < curTime && curLayer.outPoint > curTime){
                 curLayer.shy = false;
                 curLayer.selected = true;
